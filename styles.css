@@ -63,3 +63,55 @@ a{
     text-align: center;
 
 }
+/* Стили для анимации осенних листьев */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Стиль для каждого листа */
+.leaf {
+    position: absolute;
+    top: -10%;
+    animation: fall linear infinite;
+    z-index: 999;
+    pointer-events: none;
+    /* Чтобы листья не мешали взаимодействовать с другими элементами */
+}
+
+/* Различные скорости анимации для естественного эффекта */
+.leaf:nth-child(odd) {
+    animation-duration: 6s;
+}
+
+.leaf:nth-child(even) {
+    animation-duration: 8s;
+}
+
+/* Листья будут разного размера и цвета */
+.leaf {
+    font-size: 20px;
+    color: #ff9900;
+    /* Золотисто-оранжевый цвет */
+    transform-origin: center;
+}
+
+/* Добавление случайных параметров для разных листьев */
+.leaf:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.leaf:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.leaf:nth-child(3) {
+    animation-delay: 4s;
+}
