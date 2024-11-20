@@ -1,0 +1,65 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.tile {
+    border: 2px solid #4CAF50;
+    /* Зеленая рамка */
+    background-color: #DFF2E5;
+    /* Светло-зеленый фон */
+    padding: 20px;
+    margin-bottom: 15px;
+    opacity: 0;
+    /* Скрыто до появления */
+    transform: translateY(20px);
+    /* Начальная позиция */
+    animation: fadeInUp 1s forwards;
+    /* Анимация */
+}
+
+/* Анимация появления плиток */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Медиазапросы для адаптации под мобильные устройства */
+@media (max-width: 480px) {
+    .tile {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .tile h2 {
+        font-size: 16px;
+    }
+}
+#agree{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    color: black;
+}
+#currency h2{
+    background-color: #006400;
+    text-align: center;
+
+}

@@ -1,0 +1,51 @@
+/* styles-mobile.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+main {
+    padding: 10px;
+}
+
+.tile {
+    border: 2px solid #4CAF50;
+    /* Зеленая рамка */
+    background-color: #DFF2E5;
+    /* Светло-зеленый фон */
+    padding: 8px;
+    margin-bottom: 10px;
+    opacity: 0;
+    /* Скрыто до появления */
+    transform: translateY(20px);
+    /* Начальная позиция */
+    animation: fadeInUp 1s forwards;
+    /* Анимация */
+}
+
+h2 {
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+}
+
+/* Анимация появления плиток */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

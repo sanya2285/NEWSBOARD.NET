@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsBoard</title>
+    <link id="style" rel="stylesheet" href="styles.css">
+    <script>
+        // Функция для проверки, если это мобильное устройство
+        function isMobile() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            return /iphone|ipod|android|blackberry|opera mini|iemobile|windows phone/i.test(userAgent);
+        }
+
+        window.onload = function () {
+            if (isMobile()) {
+                // Если устройство мобильное, меняем на упрощенную версию
+                document.getElementById("style").setAttribute("href", "styles-mobile.css");
+            }
+
+            // Добавляем анимацию для плиток
+            const tiles = document.querySelectorAll('.tile');
+            tiles.forEach((tile, index) => {
+                tile.style.animationDelay = `${index * 0.2}s`; // Динамическая задержка для анимации
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <marquee>
+            <h1>NewsBoard</h1>
+        </marquee>
+    </header>
+
+    <main>
+        <div class="tile" id="recipes">
+            <h2>Рецепты</h2>
+            <p>Загрузка...</p>
+        </div>
+        <div class="tile" id="news">
+            <h2>Новости</h2>
+            <p>Загрузка...</p>
+        </div>
+        <div class="tile" id="sports">
+            <h2>Спорт</h2>
+            <p>Загрузка...</p>
+        </div>
+        <div class="tile" id="tech">
+            <h2>Технологии</h2>
+
+            <p>Загрузка...</p>
+        </div>
+        <div class="tile" id="currency">
+            <h2 class="currency h2">Курсы валют</h2>
+            <p>Загрузка...</p>
+        </div>
+        <!-- Новый раздел "Рецепты и кулинария" -->
+
+    </main>
+
+    <footer id="agree">
+        <h6 class="agree">@GeniyGeniyvich. 2024 :)</h6>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
