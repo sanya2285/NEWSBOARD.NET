@@ -114,6 +114,11 @@ async function fetchRSS(url, elementId) {
 
 // Подключаем RSS-канал с вашими рецептами
 fetchRSS('https://rss.app/feeds/QrAsgIzTTXha5qy1.xml', 'recipes');
+// Функция для создания случайных листьев
+function createLeaf() {
+    const leaf = document.createElement('div');
+    leaf.classList.add('leaf');
+
     // Стилизация случайных листьев
     leaf.textContent = '🍁'; // Можем использовать символы, например, лист клена 🍁
     leaf.style.left = `${Math.random() * 100}%`; // Случайная позиция по оси X
