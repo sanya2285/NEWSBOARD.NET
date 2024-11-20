@@ -114,3 +114,18 @@ async function fetchRSS(url, elementId) {
 
 // Подключаем RSS-канал с вашими рецептами
 fetchRSS('https://rss.app/feeds/QrAsgIzTTXha5qy1.xml', 'recipes');
+    // Стилизация случайных листьев
+    leaf.textContent = '🍁'; // Можем использовать символы, например, лист клена 🍁
+    leaf.style.left = `${Math.random() * 100}%`; // Случайная позиция по оси X
+    leaf.style.animationDuration = `${Math.random() * 4 + 6}s`; // Случайная продолжительность анимации (от 6 до 10 секунд)
+    leaf.style.animationDelay = `${Math.random() * 4}s`; // Случайная задержка
+
+    document.getElementById('leaves-container').appendChild(leaf);
+}
+
+// Генерация 20 случайных листьев при загрузке страницы
+window.onload = function () {
+    for (let i = 0; i < 20; i++) {
+        createLeaf();
+    }
+};
