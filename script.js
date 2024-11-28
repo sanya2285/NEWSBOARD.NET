@@ -113,7 +113,7 @@ async function fetchRSS(url, elementId) {
 }
 
 // Подключаем RSS-канал с вашими рецептами
-fetchRSS('https://rss.app/feeds/QrAsgIzTTXha5qy1.xml', 'recipes');
+fetchRSS('https://cdn.mysitemapgenerator.com/shareapi/rss/2811850351', 'recipes');
 // Функция для создания случайных листьев
 function createLeaf() {
     const leaf = document.createElement('div');
