@@ -113,14 +113,14 @@ async function fetchRSS(url, elementId) {
 }
 
 // Подключаем RSS-канал с вашими рецептами
-fetchRSS('https://cdn.mysitemapgenerator.com/shareapi/rss/2811850351', 'recipes');
+fetchRSS('https://cdn.mysitemapgenerator.com/shareapi/rss/3103975770', 'recipes');
 // Функция для создания случайных листьев
 function createLeaf() {
     const leaf = document.createElement('div');
     leaf.classList.add('leaf');
 
     // Стилизация случайных листьев
-    leaf.textContent = '❄️'; // Можем использовать символы, например, лист клена 🍁
+    leaf.textContent = '🌧️'; // Можем использовать символы, например, лист клена 🍁
     leaf.style.left = `${Math.random() * 100}%`; // Случайная позиция по оси X
     leaf.style.animationDuration = `${Math.random() * 4 + 6}s`; // Случайная продолжительность анимации (от 6 до 10 секунд)
     leaf.style.animationDelay = `${Math.random() * 4}s`; // Случайная задержка
